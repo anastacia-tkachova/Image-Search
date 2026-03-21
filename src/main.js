@@ -42,9 +42,13 @@ const searchSubmit = async (event) => {
 
         createGallery(data.hits);
 
-        const totalPages = Math.ceil(data.totalHits / 9);
+        const totalPages = Math.ceil(data.totalHits / 15);
         if (totalPages > 1) {
             showLoadMoreButton();
+        } else {
+            iziToast.info(
+                { message: "We're sorry, but you've reached the end of search results." }
+            );
         }
     } catch(error) {
         iziToast.error({
@@ -59,16 +63,16 @@ const searchSubmit = async (event) => {
 form.addEventListener("submit", searchSubmit);
 
 loadMoreBtn.addEventListener("click", async () => {
+    hideLoadMoreButton();
     showLoader();
 
     page += 1;
 
     try {
         const data = await getImagesByQuery(searchWord, page);
-        const totalPages = Math.ceil(data.totalHits / 9);
+        const totalPages = Math.ceil(data.totalHits / 15);
 
         if (page >= totalPages) {
-            hideLoadMoreButton();
             iziToast.info(
                 { message: "We're sorry, but you've reached the end of search results." }
             );

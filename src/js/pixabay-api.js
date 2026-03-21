@@ -13,7 +13,7 @@ const getImagesByQuery = async (query, page) => {
                 orientation: "horizontal",
                 safesearch: true,
                 page: page,
-                per_page: 9,
+                per_page: 15,
             }
         });
         return response.data;
