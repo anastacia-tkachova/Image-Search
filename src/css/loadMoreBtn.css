@@ -1,0 +1,24 @@
+.load-more-button {
+    display: block;
+
+    margin: 24px auto;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 120px;
+    height: 40px;
+    background: #4e75ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+.load-more-button:hover {
+    background: #6c8cff;
+}
+
+.load-more-button.hidden {
+    display: none;
+}

@@ -1,0 +1,40 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding-top: 24px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery-item {
+  border: 1px solid #3c3c3c;
+  width: 360px; 
+  transition: transform 0.3s ease;
+}
+.gallery-link {
+  display: block;
+}
+.gallery-image {
+  height: 200px;
+  width: 100%;  
+  display: block;
+  object-fit: cover;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.img-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 20px;
+}
+.img-text-item {
+  text-align: center;
+  font-size: 12px;
+}
+.img-word {
+  font-weight: 600;
+}
