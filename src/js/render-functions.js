@@ -1,7 +1,7 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-const lightbox = new SimpleLightbox('.gallery a', { captions: false, });
+const lightbox = new SimpleLightbox.default('.gallery a', { captions: false, });
 
 function createGallery(images) {
     const gallery = document.querySelector(".gallery");
@@ -67,7 +67,7 @@ function showLoadMoreButton() {
 
 function hideLoadMoreButton() {
     const loadMoreBtn = document.querySelector(".load-more-button");
-    
+
     loadMoreBtn.classList.add("hidden");
 };
 
