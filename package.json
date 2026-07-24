@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/image-search/",
-    "preview": "vite preview"
+    "build": "vite build --base=/Image-Search/",
+    "preview": "vite preview" 
   },
   "devDependencies": {
     "glob": "^11.0.0",
