@@ -7,7 +7,7 @@ import SortCss from 'postcss-sort-media-queries';
 export default defineConfig(({ command }) => {
   return {
     base: '/Image-Search/',
-    
+
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: 'src/index.html',
+        input: 'index.html',
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
