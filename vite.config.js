@@ -13,7 +13,6 @@ export default defineConfig(({ command }) => {
     },
     root: 'src',
     build: {
-      sourcemap: true,
       rollupOptions: {
         input: 'index.html',
         output: {
@@ -41,7 +40,7 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       injectHTML(),
-      FullReload(['./src/**/**.html']),
+      command === 'serve' && FullReload(['./src/**/**.html']),
       SortCss({
         sort: 'mobile-first',
       }),
