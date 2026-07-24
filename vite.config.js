@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
     base: '/Image-Search/',
 
     define: {
-      [command === 'serve' ? 'global' : '_global']: {},
+      global: 'window',
     },
     root: 'src',
     build: {
